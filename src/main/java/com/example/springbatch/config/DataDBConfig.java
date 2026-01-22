@@ -34,7 +34,7 @@ public class DataDBConfig {
         // entity 경로를 등록하면 해당 entity는 해당 DataDBConfig에서 관리한다.
         em.setDataSource(dataDBSource());
         em.setPackagesToScan(new String[]{"com.example.springbatch.entity"});
-        em. setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         HashMap<String, Object> properties = new HashMap<>();
         properties.put("hibernate.hbm2ddl.auto", "update");

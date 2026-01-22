@@ -1,6 +1,5 @@
 package com.example.springbatch.config;
 
-import org.springframework.boot.autoconfigure.batch.BatchDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +19,6 @@ public class MetaDBConfig {
      */
     @Primary
     @Bean
-    @BatchDataSource
     @ConfigurationProperties(prefix="spring.datasource-meta")
     public DataSource metaDBSource() {
         return DataSourceBuilder.create().build();
